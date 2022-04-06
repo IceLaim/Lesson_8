@@ -26,11 +26,13 @@ public class HomeWork8  extends JFrame {
         JButton decrementButton = new JButton("<");
         add(decrementButton, BorderLayout.LINE_START);
         JButton inctenmentButton = new JButton("+10");
-        add(inctenmentButton, BorderLayout.SOUTH);
         JButton dectenmentButton = new JButton("-10");
-        add(dectenmentButton, BorderLayout.SOUTH);
         JButton clearButton = new JButton("CLEAR");
         add(clearButton, BorderLayout.NORTH);
+        JPanel buttonPanel = new JPanel(new GridLayout());
+        buttonPanel.add(dectenmentButton);
+        buttonPanel.add(inctenmentButton);
+        add(buttonPanel, BorderLayout.SOUTH);
 
 
         ActionListener actionListener = new ActionListener() {
